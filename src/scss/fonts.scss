@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url('./fonts/Montserrat-VariableFont_wght.ttf')
+}
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  src: local('Source Serif Pro'), url('./fonts/SourceSerifPro-Regular.ttf')
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url('./fonts/Roboto-Regular.ttf')
+}
+
+.text-header-month-label {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #C4C4C4;
+}
+
+.text-header-month {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+
+  color: #FFFFFF;
+}
+
+.text-header-refresh {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #C4C4C4;
+}
+
+.text-header-refresh-number {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+
+  color: #FFFFFF;
+}
+
+.text-main {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 192px;
+  line-height: 225px;
+
+  color: #FFFFFF;
+}
+
+.text-main-target {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+
+  color: #FFFFFF;
+}
+
+.text-table-head {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+
+  text-transform: uppercase;
+
+  color: #FAFAFA;
+}
+
+.text-table-body {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  /* Soft White */
+
+  color: #E8E8E8;
+}
+
+.text-table-body-number {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+
+  /* Soft White */
+
+  color: #E8E8E8;
+}
