@@ -39,7 +39,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .content {
   display: flex;
   justify-content: space-between;
@@ -48,8 +48,5 @@ export default {
 }
 .button-group > *:not(:last-child){
   margin-right:9px;
-}
-.main {
-  margin: 158px 0;
 }
 </style>
