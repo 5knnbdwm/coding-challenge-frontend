@@ -15,9 +15,7 @@
         @changeSelectedMonth="newSelectedMonth"
       />
       <div class="main">
-        <div class="text-header-main">
-          <!-- {{typeof ordersTotalCurrentMonth}} -->
-          <!-- {{computedConvertToEuroText(ordersTotalCurrentMonth, 2)}} -->
+        <div class="text-main">
           {{convertToEuroFormat(ordersTotalCurrentMonth, 2)}}
           </div>
       </div>
