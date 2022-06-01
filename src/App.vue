@@ -1,7 +1,5 @@
 <template>
-  <!-- <div class="background-wrapper"> -->
-    <img class="background" :src="backgroundArt" alt="backgroundArt">
-  <!-- </div> -->
+  <img class="background" :src="backgroundArt" alt="backgroundArt">
   <div class="loaded" v-if="!initialLoad">
     <div class="box-head">
       <div class="box-header">
@@ -130,10 +128,6 @@ export default {
 .loaded {
   padding: 36px 0;
 }
-.background-wrapper {
-  // width: 100vw;
-
-}
 .background {
   position: absolute;
   width: 1250.4px;
@@ -154,7 +148,6 @@ export default {
   overflow: hidden;
 }
 .box-table {
-  // margin: 43px 0 0 0;
   margin-top: 43px;
 }
 </style>
