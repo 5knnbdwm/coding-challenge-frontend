@@ -1,5 +1,8 @@
 <template>
-  <div class="app" v-if="!initialLoad">
+  <!-- <div class="background-wrapper"> -->
+    <img class="background" :src="backgroundArt" alt="backgroundArt">
+  <!-- </div> -->
+  <div class="loaded" v-if="!initialLoad">
     <div class="box-head">
       <div class="box-header">
         <div class="text-header-month-label">
@@ -35,6 +38,8 @@ import TableSections from '@/components/TableSections.vue';
 import { fetchOrders, fetchTargets } from '@/api/googleSheets';
 import { convertToEuroFormat } from '@/utils';
 
+import backgroundArt from '@/assets/background_art.svg';
+
 export default {
   name: 'App',
   components: {
@@ -44,6 +49,7 @@ export default {
   },
   data() {
     return {
+      backgroundArt,
       orders: [],
       targets: [],
       selectedMonth: 0,
@@ -110,15 +116,31 @@ export default {
 
 <style lang="scss">
 @import './scss/fonts.scss';
+
+#app {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+}
 </style>
 
 <style lang="scss" scoped>
-.app {
-  // width: 100vw;
-  min-height: calc(100vh - 36px * 2);
-  // minheight: 100vh;
-  background-color: rgb(0, 0, 0);
+
+.loaded {
   padding: 36px 0;
+}
+.background-wrapper {
+  // width: 100vw;
+
+}
+.background {
+  position: absolute;
+  width: 1250.4px;
+  height: 1234.97px;
+  right: -680px;
+  top: -480px;
+  transform: rotate(-17deg);
 }
 .box-head {
   padding: 0 37px ;
