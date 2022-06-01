@@ -17,23 +17,18 @@
       <div class="main">
         <div class="text-main">
           {{convertToEuroFormat(ordersTotalCurrentMonth, 2)}}
-          </div>
+        </div>
       </div>
-      <!-- <div class="target">
-
-      </div> -->
-      <code class="text-header-refresh">
-        <!-- {{ordersTotalCurrentMonth}}
-        {{ordersCurrentMonth}} -->
-        <!-- {{convertToEuroFormat(targetCurrentMonth.value,0)}} -->
-      </code>
+      <target-section :target="targetCurrentMonth" :ordersValue="ordersTotalCurrentMonth" />
     </div>
-    <div class="content"></div>
+    <!-- <div class="content"></div> -->
   </div>
 </template>
 
 <script>
 import MonthSelector from '@/components/MonthSelector.vue';
+import TargetSection from '@/components/TargetSection.vue';
+
 import { fetchOrders, fetchTargets } from './api/googleSheets';
 import { convertToEuroFormat } from './utils';
 
@@ -41,6 +36,7 @@ export default {
   name: 'App',
   components: {
     MonthSelector,
+    TargetSection,
   },
   data() {
     return {
@@ -114,8 +110,8 @@ export default {
 
 <style lang="scss" scoped>
 .app {
-  width: 100vw;
-  height: 100vh;
+  // width: 100vw;
+  // height: 100vh;
   background-color: rgb(0, 0, 0);
 }
 .head {
@@ -125,5 +121,7 @@ export default {
   display: flex;
   justify-content: space-between;
 }
-
+.main {
+  margin: 158px 0 101px 0;
+}
 </style>
