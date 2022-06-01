@@ -21,22 +21,26 @@
       </div>
       <target-section :target="targetCurrentMonth" :ordersValue="ordersTotalCurrentMonth" />
     </div>
-    <!-- <div class="content"></div> -->
+    <div class="box-table">
+      <table-sections :orders="ordersCurrentMonth"/>
+    </div>
   </div>
 </template>
 
 <script>
 import MonthSelector from '@/components/MonthSelector.vue';
 import TargetSection from '@/components/TargetSection.vue';
+import TableSections from '@/components/TableSections.vue';
 
-import { fetchOrders, fetchTargets } from './api/googleSheets';
-import { convertToEuroFormat } from './utils';
+import { fetchOrders, fetchTargets } from '@/api/googleSheets';
+import { convertToEuroFormat } from '@/utils';
 
 export default {
   name: 'App',
   components: {
     MonthSelector,
     TargetSection,
+    TableSections,
   },
   data() {
     return {
@@ -111,7 +115,8 @@ export default {
 <style lang="scss" scoped>
 .app {
   // width: 100vw;
-  // height: 100vh;
+  min-height: calc(100vh - 36px * 2);
+  // minheight: 100vh;
   background-color: rgb(0, 0, 0);
   padding: 36px 0;
 }
@@ -124,5 +129,10 @@ export default {
 }
 .box-main {
   margin: 158px 0 101px 0;
+  overflow: hidden;
+}
+.box-table {
+  // margin: 43px 0 0 0;
+  margin-top: 43px;
 }
 </style>
