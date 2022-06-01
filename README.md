@@ -1,5 +1,17 @@
 # AM Coding Challenge - Frontend (VueJS)
 
+## Project setup
+uses node version v16.14.0
+```
+nvm use
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
 ## The case study: Product Order Dashboard
 
 ![AM Order Dashboard Challenge](https://github.com/5knnbdwm/coding-challenge-frontend/blob/VueJS/Order-Dashboard-v2.png)
