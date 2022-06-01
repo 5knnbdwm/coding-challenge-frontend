@@ -31,7 +31,7 @@ export const fetchTargets = async () => {
   values.forEach((row) => {
     data.push({
       month: row[0],
-      targetValue: row[1].replace(/\.|,/gm, '').replace(/\s?€/, ''),
+      targetValue: row[1].replace(/\.|,/gm, '').replace(/\s?€/, '').replace(/\d\d$/, ''),
     });
   });
 
