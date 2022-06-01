@@ -1,10 +1,10 @@
 <template>
   <div
-    class="bar-box"
+    class="outter"
     :style="`height: ${height}; background-color: ${backgroundColor};`"
   >
     <div
-      class="bar"
+      class="inner"
       :style="`width: ${value};`"
     ></div>
   </div>
@@ -31,13 +31,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.bar-box {
+.outter {
   display: block;
   width: 100%;
 
   z-index: 1;
 }
-.bar {
+.inner {
   height: inherit;
   background-color: #2066D2;
 

@@ -1,14 +1,14 @@
 <template>
   <div class="container">
-    <div class="target-box">
-      <div class="target-box-inner">
+    <div class="box-target">
+      <div class="box-target-inner">
         <div class="text-main-target">
           {{convertToEuroFormat(target.targetValue,0)}}
         </div>
         <div class="indicator-line"></div>
       </div>
     </div>
-    <div class="bar-box">
+    <div class="box-progress-bar">
       <progress-bar
         :value="formatTargetValueToCSSWidth(ordersValue, target.targetValue)"
         height="47px"
@@ -35,20 +35,17 @@ export default {
 <style lang="scss" scoped>
 .container {
   position: relative;
-  // display: inline-flex;
-  // width: calc(100% - (36px * 2));
   width: 100%;
   height: 119px;
 }
-.target-box {
+.box-target {
   display: grid;
   grid-template-columns: repeat(5, 20%);
-  grid-template-rows: auto;
+  grid-template-rows: 119px;
   grid-template-areas: ". . . . target";
-  height:119px;
   z-index: 2
 }
-.target-box-inner{
+.box-target-inner{
   grid-area: target;
   height:inherit;
   display: flex;
@@ -63,17 +60,12 @@ export default {
   background-color: #C4C4C4;
   z-index:10;
 }
-.bar-box {
+.box-progress-bar {
   position: absolute;
   left: 0px;
   right: 0px;
   top: 0px;
   bottom: 0px;
-  // left:
-  // right:0;
-  // display: inline-flex;
-  // width: inherit;
-  // width:;
-  margin: 28px 0 0 0;
+  margin: 56px 0 0 0;
 }
 </style>

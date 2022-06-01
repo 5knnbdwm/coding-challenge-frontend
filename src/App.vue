@@ -1,7 +1,7 @@
 <template>
   <div class="app" v-if="!initialLoad">
-    <div class="head">
-      <div class="header">
+    <div class="box-head">
+      <div class="box-header">
         <div class="text-header-month-label">
           Order Dashboard
         </div>
@@ -14,7 +14,7 @@
         :selectedMonth="selectedMonth"
         @changeSelectedMonth="newSelectedMonth"
       />
-      <div class="main">
+      <div class="box-main">
         <div class="text-main">
           {{convertToEuroFormat(ordersTotalCurrentMonth, 2)}}
         </div>
@@ -113,15 +113,16 @@ export default {
   // width: 100vw;
   // height: 100vh;
   background-color: rgb(0, 0, 0);
+  padding: 36px 0;
 }
-.head {
-  padding: 37px 36px;
+.box-head {
+  padding: 0 37px ;
 }
-.header {
+.box-header {
   display: flex;
   justify-content: space-between;
 }
-.main {
+.box-main {
   margin: 158px 0 101px 0;
 }
 </style>
