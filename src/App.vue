@@ -14,13 +14,16 @@
         :selectedMonth="selectedMonth"
         @changeSelectedMonth="newSelectedMonth"
       />
-      <div class="box-main">
-        <div class="text-main">
-          {{convertToEuroFormat(ordersTotalCurrentMonth, 2)}}
-        </div>
+    </div>
+    <div class="box-main">
+      <div class="text-main">
+        {{convertToEuroFormat(ordersTotalCurrentMonth, 2)}}
       </div>
+    </div>
+    <div class="box-target">
       <target-section :target="targetCurrentMonth" :ordersValue="ordersTotalCurrentMonth" />
     </div>
+
     <div class="box-table">
       <table-sections :orders="ordersCurrentMonth"/>
     </div>
@@ -148,10 +151,15 @@ export default {
   justify-content: space-between;
 }
 .box-main {
+  padding: 0 37px ;
   margin: 158px 0 101px 0;
   overflow: hidden;
 }
+.box-target {
+  padding: 0 37px ;
+}
 .box-table {
+  // padding: 0 37px ;
   margin-top: 43px;
 }
 </style>
