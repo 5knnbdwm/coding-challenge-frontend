@@ -43,7 +43,7 @@ export default {
   grid-template-columns: repeat(5, 20%);
   grid-template-rows: 119px;
   grid-template-areas: ". . . . target";
-  z-index: 2
+  z-index: 2;
 }
 .box-target-inner{
   grid-area: target;
@@ -58,7 +58,7 @@ export default {
   height: 79px;
 
   background-color: #C4C4C4;
-  z-index:10;
+  z-index: 10;
 }
 .box-progress-bar {
   position: absolute;

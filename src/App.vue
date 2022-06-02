@@ -1,5 +1,4 @@
 <template>
-  <img class="background" :src="backgroundArt" alt="backgroundArt">
   <div class="loaded" v-if="!initialLoad">
     <div class="box-head">
       <div class="box-header">
@@ -26,6 +25,7 @@
       <table-sections :orders="ordersCurrentMonth"/>
     </div>
   </div>
+  <img class="background" :src="backgroundArt" alt="backgroundArt">
 </template>
 
 <script>
@@ -121,12 +121,15 @@ export default {
   overflow: hidden;
   background-color: rgb(0, 0, 0);
 }
+* {
+  z-index: inherit;
+}
 </style>
 
 <style lang="scss" scoped>
-
 .loaded {
   padding: 36px 0;
+  z-index: 1;
 }
 .background {
   position: absolute;
@@ -135,6 +138,7 @@ export default {
   right: -680px;
   top: -480px;
   transform: rotate(-17deg);
+  z-index:0;
 }
 .box-head {
   padding: 0 37px ;

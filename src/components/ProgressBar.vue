@@ -35,12 +35,12 @@ export default {
   display: block;
   width: 100%;
 
-  z-index: 1;
+  z-index: 2;
 }
 .inner {
   height: inherit;
   background-color: #2066D2;
 
-  z-index:2;
+  z-index: 3;
 }
 </style>
