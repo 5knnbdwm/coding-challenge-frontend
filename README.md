@@ -6,6 +6,7 @@ uses node version v16.14.0
 nvm use
 npm install
 ```
+add google api-key and the google sheet-id to the .env file
 
 ### Compiles and hot-reloads for development
 ```
