@@ -10,7 +10,7 @@ export const floatToPercentage = (num) => num.toString().replace(/(\d?\d?\d)\..*
 
 export const formatTargetValueToCSSWidth = (num, max) => {
   let adjusted = mapNumberToNewRange(num, 0, max * 1.1, 0, 100);
-  if (adjusted > 100) adjusted = 100;
-  if (adjusted < 1) adjusted = 1;
+  if (adjusted > 100) adjusted = '100%';
+  if (adjusted < 1) adjusted = '1%';
   return floatToPercentage(adjusted);
 };
